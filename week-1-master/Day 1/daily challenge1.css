@@ -1,0 +1,56 @@
+#menus ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#menus { 
+    float: right;
+}
+
+#menu li { 
+    float: left;
+}
+
+ul li{
+  display: inline;
+
+}
+
+body {
+  background-color: black;
+}
+
+header{
+ background-image: url("thor.jpg");
+  background-color: #cccccc;
+  height: 400px; 
+  background-position: center; 
+  background-size: cover; 
+  text-align: left;
+  padding: 200px;
+  font: 
+}
+
+nav
+{
+overflow: auto;
+height: 200px;
+}
+
+.texte {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.tex {
+  position: absolute;
+  font-size: 50px;
+  left: 16px;
+  bottom: 100px;
+}
+#logo{
+	 float: right;
+	 background-color: black;
+}

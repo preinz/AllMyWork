@@ -1,0 +1,51 @@
+#container{
+	display: grid;
+	grid-template-rows: repeat(4, 100px);
+	grid-template-columns: 300px 700px;
+	grid-template-areas:  
+	"one four"
+	"two five"
+	"three six"
+	"seven seven";
+	grid-row-gap: 30px;
+	grid-column-gap: 40px;
+	justify-content: center;
+
+
+
+}
+
+#one{
+ 	grid-area: one;
+ 	background-color: pink;
+}
+
+#two{
+	grid-area: two;
+	background-color: pink;
+}
+
+#three{
+	grid-area: three;
+	background-color: pink;
+}
+
+#four{
+ 	grid-area: four;
+ 	background-color: lightblue;
+}
+
+#five{
+ 	grid-area: five;
+ 	background-color: lightblue;
+}
+
+#six{
+ 	grid-area: six;
+ 	background-color: lightblue;
+}
+
+#seven{
+ 	grid-area: seven;
+ 	background-color: yellow;
+}

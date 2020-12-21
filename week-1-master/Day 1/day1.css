@@ -1,0 +1,60 @@
+
+body {
+  background-color: white;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+table{
+
+	color: pink;
+}
+
+table, th, td{
+	border: 2px black solid;
+	border-collapse: collapse;
+}
+
+form {
+
+
+	color: black;
+
+}
+
+
+#form1 {
+	text-align: center;
+    color: red;
+}
+#titres{
+	background-color: pink;
+	float: right;
+	text-align: center;
+	padding: 10px;
+	margin: 20px;
+
+}
+
+ul li{
+	color: red;
+}
+
+a{
+	color: pink;
+}
+
+u{
+	color: green;
+}
+
+i{
+	color: blue;
+}

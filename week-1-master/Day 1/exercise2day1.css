@@ -1,0 +1,40 @@
+body {
+  background-color: gray;
+}
+
+header{
+ background-image: url("mer.jpg");
+  background-color: #cccccc;
+  height: 400px; 
+  background-position: center; 
+  background-size: cover; 
+  text-align: center;
+  padding: 200px;
+}
+
+#sign{
+	float:  right;
+	color: blue;
+	margin: left;
+}
+
+#signup{
+
+	color: white;
+	margin: left;
+	background-color: blue;
+}
+
+#section1{
+ position: center;	
+ float: center;
+}
+
+table, th, td{
+
+	position: center;
+
+}
+table{
+	margin-left: 250px;
+}

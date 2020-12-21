@@ -1,0 +1,19 @@
+h2{color:red;
+   font-size:50px;
+   }
+
+ h1{color:blue;
+ 
+ }
+
+ tr{color:blue;
+}
+
+td:hover{
+	color:red;
+	background:lime;
+}  
+
+p{
+	color:pink;
+}

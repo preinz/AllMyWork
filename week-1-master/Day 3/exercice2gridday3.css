@@ -1,0 +1,132 @@
+#container{
+	display: grid;
+	grid-template-rows: repeat(6, 100px);
+	grid-template-columns: 200px 200px 200px;
+	grid-template-areas:  
+	"one one one"
+	"two three three"
+	"four three three"
+	"four five five"
+	"six six seven"
+	"eight eight eight";
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+	justify-content: center;
+
+
+
+}
+
+#one{
+ 	grid-area: one;
+ 	background-color: pink;
+}
+
+#two{
+	grid-area: two;
+	background-color: red;
+}
+
+#three{
+	grid-area: three;
+	background-color: purple;
+}
+
+#four{
+ 	grid-area: four;
+ 	background-color: lightblue;
+}
+
+#five{
+ 	grid-area: five;
+ 	background-color: blue;
+}
+
+#six{
+ 	grid-area: six;
+ 	background-color: orange;
+}
+
+#seven{
+ 	grid-area: seven;
+ 	background-color: yellow;
+}
+
+#eight{
+ 	grid-area: seven;
+ 	background-color: gray;
+}
+
+#maison{
+
+	display: grid;
+	grid-template-rows: repeat(7,50px);
+	grid-template-columns: repeat(11, 50px);
+	grid-gap: 10px 20px;
+	grid-template-areas: 
+	"un un un un un un un"
+	"deux deux deux trois trois trois trois "
+	"deux deux deux trois trois trois trois"
+	"deux deux deux trois trois trois trois"
+	"quatre quatre quatre trois trois trois trois"
+	"quatre quatre quatre trois trois trois trois"
+	"quatre quatre quatre cinq cinq cinq cinq"
+	"quatre quatre quatre cinq cinq cinq cinq"
+	"six six six six six sept sept"
+	"six six six six six sept sept"
+	"huit huit huit huit huit huit huit";
+	justify-content: center;
+}
+
+.un{
+	display: grid;
+	grid-area: un;
+	background-color: lightblue;
+	grid-column: span 7;
+}
+
+.deux{
+	display: grid;
+	grid-area: deux;
+	background-color: purple;
+	grid-column: span 3;
+	grid-row: 2 / span 3;
+}
+
+.trois{
+	display: grid;
+	grid-area: trois;
+	background-color: yellow;
+	text-align: center;
+	
+}
+
+.quatre{
+	display: grid;
+	grid-area: quatre;
+	background-color: green;
+
+}
+
+.cinq{
+	display: grid;
+	grid-area: cinq;
+	background-color: gray;
+}
+.six{
+	display: grid;
+	grid-area: six;
+	background-color: lightgreen;
+}
+
+.sept{
+	display: grid;
+	grid-area: sept;
+	background-color: pink;
+}
+
+.huit{
+	display: grid;
+	grid-area: huit;
+	background-color: orange;
+}

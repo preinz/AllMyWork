@@ -1,0 +1,163 @@
+
+body{
+	    background-image: url("world2.jpg");
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+}
+
+#container{
+
+	display: grid;
+	grid-template-rows: 50px 50px;
+	grid-template-columns: 300px 300px 300px;
+	grid-gap: 10px 10px;
+	grid-template-areas: 
+	"un deux trois"
+	"quatre cinq six";
+	justify-content: center;
+	text-align: center;
+
+
+
+}
+
+#un{
+	display: grid;
+	grid-area: un;
+	align-content: center;
+
+
+}
+
+#deux{
+	display: grid;
+	grid-area: deux;
+	align-content: center;
+
+}
+
+#trois{
+	display: grid;
+	grid-area: trois;
+	align-content: center;
+
+}
+
+#quatre{
+	display: grid;
+	grid-area: quatre;
+	align-content: center;
+
+}
+
+#cinq{
+	display: grid;
+	grid-area: cinq;
+	align-content: center;
+
+}
+
+#six{
+	display: grid;
+	grid-area: six;
+	align-content: center;
+
+}
+
+
+
+#container1{
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	width: 800px;
+	height: 400px;
+	margin-left: 300px;
+}
+
+
+#elt1{
+	display: flex;
+	background-color: white;
+	align-self: center;
+	width: 600px;
+	height: 200px;
+	text-align: center;
+	flex-direction: column;
+	
+	
+}
+
+#elt11{
+	display: flex;
+	width: 300px;
+	height: 100px;
+
+}
+
+#elt12{
+	display: flex;
+	width: 300px;
+	height: 100px;
+	background-color: red;
+}
+
+
+#elt2{
+	display: flex;
+	background-color: white;
+	align-self: flex-end;
+	width: 600px;
+	height: 200px;
+	text-align: center;
+	flex-direction: column;
+}
+
+#elt21{
+	display: flex;
+	width: 300px;
+	height: 100px;
+
+}
+
+#elt22{
+	display: flex;
+	width: 300px;
+	height: 100px;
+	background-color: purple;
+}
+
+#elt3{
+	display: flex;
+	background-color: white;
+	align-self: center;
+	width: 600px;
+	height: 200px;
+	text-align: center;
+	flex-direction: column;
+}
+
+#elt31{
+	display: flex;
+	width: 300px;
+	height: 100px;
+
+}
+
+#elt32{
+	display: flex;
+	width: 300px;
+	height: 100px;
+	background-color: lightblue;
+}
+
+img{
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%; 
+	position: absolute;
+	
+}

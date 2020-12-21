@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html,h1,h2,h3,h4,h5,h6,a{
+    font-family: "Raleway";
+}
+
+header{
+height: 600px;
+
+background-image: url("burea1.jpg");
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+opacity: 0.5;
+z-index: 1;
+position: relative;
+
+}
+
+.overlay{
+
+	
+}
+
+.jumbotron{
+	background-color: transparent!important;
+	left: 200px!important;
+	top: 200px!important;
+	z-index: 3;
+	position: absolute;
+}
+.container{
+
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+
+}
+#h3{
+	text-align: center;
+}

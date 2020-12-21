@@ -1,0 +1,36 @@
+#container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-flow: column;
+	justify-content: space-around;
+	background-color: white;
+	text-align: center;
+	height: 500px;
+}
+
+#container div{
+	background-color: lightblue;
+	border: 2px black solid;
+	
+
+}
+
+#one{
+
+}
+
+#two{
+	height: 200px;
+	align-self: center;
+	width: 800px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+#three{
+	
+}
