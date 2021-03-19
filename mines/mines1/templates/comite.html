@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MINMIDT - LITTORAL</title>
-    <link rel="stylesheet" href="{% static 'styles/acceuil.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/aceuils.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -21,9 +21,9 @@
                         <a href="#" class="nav__topLink">English</a>
                     </p>
                     <div class="nav__topSocial">
-                        <a herf="#" class="nav__topIcon"><img src="assets/facebook-letter.png" alt="instagram"></a>
-                        <a herf="#" class="nav__topIcon"><img src="assets/twitter.png" alt="instagram"></a>
-                        <a herf="#" class="nav__topIcon"><img src="assets/instagram.png" alt="instagram"></a>
+                        <a herf="#" class="nav__topIcon"><img src="{% static 'assets/facebook-letter.png' %}" alt="instagram"></a>
+                        <a herf="#" class="nav__topIcon"><img src="{% static 'assets/twitter.png' %}" alt="instagram"></a>
+                        <a herf="#" class="nav__topIcon"><img src="{% static 'assets/instagram.png' %}" alt="instagram"></a>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <img src="assets/logo_blason_cameroun.png" alt="logo">
+                    <img src="{% static 'assets/logo_blason_cameroun.png' %}" alt="logo">
                     <div class="logo__text">
                         <h6>MINMIDT</h6>
                         <h6>Délégation Régionale du Littoral</h6>
@@ -179,14 +179,14 @@
                     <div class="search">
                         <input type="text" placeholder="Rechercher">
                         <button id="searchBtn">
-                            <img src="assets/loupe.svg" alt="loupe">
+                            <img src="{% static 'assets/loupe.svg' %}" alt="loupe">
                         </button>
                     </div>
                 </div>
             </div>
             <div class="banner">
                 <div class="banner__content">
-                    <h2>Vitrine du Cameroun</h2>
+                    <h2>Comité Regionale Du Centre</h2>
                     <button>En Savoir Plus</button>
                 </div>
             </div>
@@ -354,6 +354,44 @@ Mardi 25 fevrier 2020
                     <div></div>
                 </div>
             </section>
+            <br>
+             <section class="suggestions">
+                <article class="suggestions__left">
+                    <h2>Boite à Suggestions</h2>
+                </article>
+                <article class="suggestions__right">
+                    <form id="sendMailForm">
+                        <div class="suggestions__rightInputs">
+                            <div class="inputs__left">
+                                <div class="input__form">
+                                    <h6>Email</h6>
+                                    <input type="text" placeholder="Email">
+                                </div>
+                                <div class="input__form">
+                                    <h6>Contact</h6>
+                                    <input type="text" placeholder="Téléphone">
+                                </div>
+                            </div>
+                            <div class="input__textArea">
+                                <h6>Message</h6>
+                                <div class="textarea">
+                                    <textarea type="text" placeholder="Que suggerez-vous ?"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit">Envoyer</button>
+                        <script>
+                        document.getElementById("sendMailForm").onsubmit = (e) => {
+                                const email = ""
+                                const body = ""
+                                e.preventDefault()
+                                console.log(window.location)
+                                window.location.replace("mailto:nsaaaime@gmail.com" +  + "?subject=Provenant de : " + e.target[0].value + "\n" + e.target[1].value + "body="+e.target[2].value)
+                            }
+                        </script>
+                    </form>
+                </article>
+            </section>
 
         </main>
         <footer>
@@ -413,6 +451,12 @@ Mardi 25 fevrier 2020
                     </ul>
                 </article>
             </div>
+
+
+
+
+
+
             <div class="footer__bottom">
                 <span>&copy;&nbsp;</span> Copyright 2021. Tous droits reservés.
             </div>
@@ -437,6 +481,6 @@ Mardi 25 fevrier 2020
        map6.selectAll(".line").data(data).enter().append("line").attr("x1", (d, i)=> 300*i/data.length).attr("x2", (d, i)=> 300*(i+1)/data.length).attr("y1", d => 50 - d).attr("y2", (d, i) => 50 - data[i+1]).attr("stroke", "yellow").attr("stroke-width", 2)
 
     </script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

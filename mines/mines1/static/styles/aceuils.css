@@ -1291,9 +1291,46 @@ text-align: center;
 }
 
 
+#boite{
+    font-size: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 23px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #707070;
+  background-color: #ffffff;
+}
 
 
+#boite {
+text-align: center;
+}
 
+#boite .boxes {
+    width: 100%;
+}
+
+#boite .boxes:nth-child(1) {
+    border-right: 1px solid gray;
+}
+
+#boite .boxes > div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#boite .boxes > div div {
+    margin: 0 10px;
+}
+
+#boite .boxes-con {
+    display: flex;
+    justify-content: space-around;
+}
+
+.suggestions{
+
+
+}
 
 
 
