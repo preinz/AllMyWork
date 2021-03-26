@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MINMIDT - LITTORAL</title>
+    <title>MINMIDT - CENTRE</title>
     <link rel="stylesheet" href="{% static 'styles/aceuils.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -34,19 +34,19 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <img src="{% static 'assets/logo_blason_cameroun.png' %}" alt="logo">
+                    <img src="{% static 'assets/camer.jpg' %}" alt="logo">
                     <div class="logo__text">
                         <h6>MINMIDT</h6>
-                        <h6>Délégation Régionale du Littoral</h6>
+                        <h6>Délégation Régionale du Centre</h6>
                     </div>
                 </div>
                 <div id="navwrapper" class="nav__mobile">
                     <ul>
                         <li class="nav__item">
-                            <a href="index.html" class="nav__link nav__link--active">Acceuil</a>
+                            <a href="index.html" class="nav__link nav__link--active">Organigramme</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Services
+                            <a href="#" class="nav__link">Planning
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14.221" height="9.229" viewBox="0 0 14.221 9.229">
                                     <path d="M9.111 11.229L2 4.118 4.118 2l4.993 4.993L14.1 2l2.118 2.118z" transform="translate(-2 -2)"/>
                                 </svg>
@@ -98,7 +98,7 @@
                             </div>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Comité Régional
+                            <a href="#" class="nav__link">Actualités
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14.221" height="9.229" viewBox="0 0 14.221 9.229">
                                     <path d="M9.111 11.229L2 4.118 4.118 2l4.993 4.993L14.1 2l2.118 2.118z" transform="translate(-2 -2)"/>
                                 </svg>
@@ -192,6 +192,18 @@
             </div>
         </header>
         <main>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="titre"><a href="/blog">Blog</a> </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <section class="actu">
                 <article class="actu__item">
                     <p class="actu__topAsset">
@@ -234,10 +246,28 @@
             <br>
             <br>
              <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
             <div class="titre"><a href="#">PLANNING</a> </div>
             <br>
              <br>
             <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
             <section id="planning">
 
                 <table id="planning-table">
@@ -301,6 +331,29 @@ Mardi 25 fevrier 2020
 
             </section>
             <br> <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+             <div class="titre"><a href="#">STATISTIQUES</a> </div>
+
+            <br>
+            <br>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <section>
                 <div id="stats">
                     <div>
@@ -355,38 +408,62 @@ Mardi 25 fevrier 2020
                 </div>
             </section>
             <br>
+             <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+             <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+             <div class="titre"><a href="#">BOITE A SUGGESTIONS</a> </div>
+              <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
              <section class="suggestions">
                 <article class="suggestions__left">
                     <h2>Boite à Suggestions</h2>
                 </article>
                 <article class="suggestions__right">
-                    <form id="sendMailForm">
+                    <form action="{% url 'comite' %}" id="sendMailForm" method="POST">
+                            {% csrf_token %}
                         <div class="suggestions__rightInputs">
                             <div class="inputs__left">
                                 <div class="input__form">
                                     <h6>Email</h6>
-                                    <input type="text" placeholder="Email">
+                                    {{form.Email}}
                                 </div>
                                 <div class="input__form">
                                     <h6>Contact</h6>
-                                    <input type="text" placeholder="Téléphone">
+                                    {{form.Contact}}
                                 </div>
                             </div>
                             <div class="input__textArea">
                                 <h6>Message</h6>
                                 <div class="textarea">
-                                    <textarea type="text" placeholder="Que suggerez-vous ?"></textarea>
+                                    {{form.Message}}
+
                                 </div>
                             </div>
                         </div>
                         <button type="submit">Envoyer</button>
-                        <script>
+                       <script>
                         document.getElementById("sendMailForm").onsubmit = (e) => {
                                 const email = ""
                                 const body = ""
                                 e.preventDefault()
                                 console.log(window.location)
-                                window.location.replace("mailto:nsaaaime@gmail.com" +  + "?subject=Provenant de : " + e.target[0].value + "\n" + e.target[1].value + "body="+e.target[2].value)
+                                console.log(e.target[0])
+                                window.location.replace("mailto:nsaaaime@gmail.com?subject=Provenant de : " + e.target[1].value + "\n" + "&body="+e.target[3].value + " " + e.target[2].value)
                             }
                         </script>
                     </form>

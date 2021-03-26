@@ -7,7 +7,12 @@ from django import forms
 
 
 
-class ProfileForm(forms.ModelForm):
+class SendForm(forms.ModelForm):
     class Meta:
-        model = Profile
+        model = Send
+        fields = '__all__'
+
+class TableForm(forms.ModelForm):
+     class Meta:
+        model = Table
         fields = '__all__'

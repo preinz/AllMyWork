@@ -9,4 +9,16 @@ from .models import *
 
 
 def comite(request):
-    return render(request, 'comite.html')
+    if request.method == 'POST':
+        form=SendForm(request.POST)
+        print(request.POST)
+        Send.objects.create( Email = request.POST.get("Email"),
+        Contact = request.POST.get("Contact"),
+        Message = request.POST.get("Message"))
+        return render(request, 'comites.html')
+    form = SendForm()
+    context = {
+        'form': form
+    }
+
+    return render(request, 'comite.html', context)
